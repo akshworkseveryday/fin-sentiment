@@ -28,20 +28,3 @@ python train.py                      # ~2-5 min on a GPU
 python sentiment.py "Apple beats earnings estimates"
 streamlit run app.py                 # http://localhost:8501
 ```
-
-## Results
-Fill in from `results/results.json` after training.
-
-| Model | Accuracy | Macro-F1 |
-|---|---|---|
-| Majority class (always Neutral) | | |
-| TF-IDF + Logistic Regression | | |
-| **DistilBERT (fine-tuned)** | | |
-
-Also see `results/confusion_matrix.png`, `results/classification_report.txt`, `results/loss_curve.png`.
-
-## Notes
-- The dataset is imbalanced (about 65% Neutral), so **Macro-F1** is more informative than accuracy: it treats all three classes equally.
-- Trained on a 3,000-example subset for speed. Set `TRAIN_SAMPLES = None` in `config.py` to use everything.
-- Trained on tweets, so it works best on short, headline-style text.
-- Educational project. Not financial advice.
